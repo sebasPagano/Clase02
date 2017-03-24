@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listener = new MyListener();
         btn1.setOnClickListener(listener);
 
+        Button btn2 = (Button) findViewById(R.id.Boton2);
+        btn2.setOnClickListener(listener);
+
 
 
     }

@@ -12,6 +12,14 @@ public class MyListener implements View.OnClickListener {
     @Override
     public void onClick(View v)
     {
-        Log.d("CLICK","se hizo click");
+
+        if(v.getId()==R.id.Boton1)
+        {
+            Log.d("CLICK","se hizo click");
+        }
+        else
+        {
+            Log.d("CLICK","se hizo click en el boton2");
+        }
     }
 }
