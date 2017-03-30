@@ -6,25 +6,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IMostrarInfo {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//genera todas las instancias de las view
+
         TextView tv = (TextView) super.findViewById(R.id.Hola);
         tv.setText("XDXDXD");
+
         Button btn1 = (Button) findViewById(R.id.Boton1);
         btn1.setText("Cualquier nombre");
 
-        View.OnClickListener listener = new MyListener();
+        View.OnClickListener listener = new MyListener(this);
         btn1.setOnClickListener(listener);
+
 
         Button btn2 = (Button) findViewById(R.id.Boton2);
         btn2.setOnClickListener(listener);
 
 
+    }
 
+    public void mostrarInfo() {
+        TextView tev = (TextView) super.findViewById(R.id.Hola);
+        tev.setText("se cambia");
     }
 }
 
