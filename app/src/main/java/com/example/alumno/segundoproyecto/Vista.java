@@ -23,8 +23,8 @@ public class Vista implements IMostrarInfo {
 
         btn1 = (Button) a.findViewById(R.id.Boton1);
         btn1.setText("Cualquier nombre");
-        //View.OnClickListener listener = new MyListener(a);
-        //btn1.setOnClickListener(listener);
+        View.OnClickListener listener = new MyListener(this);
+        btn1.setOnClickListener(listener);
 
 
 
